@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shoe_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,127 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Men's shoe size conversion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpa-7G-4NJ">
+                                <rect key="frame" x="37" y="20" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter shoe size here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9rD-5W-vXL">
+                                <rect key="frame" x="37" y="71" width="215" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Converted shoe size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-EQ-59d">
+                                <rect key="frame" x="37" y="129" width="215" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="cGi-lW-Qtl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cGi-lW-Qtl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="cGi-lW-Qtl"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use whole numbers only" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnj-IC-chR">
+                                <rect key="frame" x="37" y="172" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPA-xz-urg">
+                                <rect key="frame" x="316" y="16" width="63" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="2dQ-c9-LUX"/>
+                                </constraints>
+                                <state key="normal" title="Convert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2dQ-c9-LUX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2dQ-c9-LUX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AgL-ae-Zga"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9rD-5W-vXL" firstAttribute="trailing" secondItem="Zpa-7G-4NJ" secondAttribute="trailing" id="2Fa-vW-8LC"/>
+                            <constraint firstItem="uPA-xz-urg" firstAttribute="centerX" secondItem="Zpa-7G-4NJ" secondAttribute="centerX" id="5nu-tH-g6f"/>
+                            <constraint firstAttribute="centerY" secondItem="Zpa-7G-4NJ" secondAttribute="centerY" constant="215.5" id="9y9-TJ-W0E"/>
+                            <constraint firstItem="Lnj-IC-chR" firstAttribute="trailing" secondItem="uPA-xz-urg" secondAttribute="trailing" id="Bof-q6-J9w"/>
+                            <constraint firstAttribute="centerX" secondItem="uPA-xz-urg" secondAttribute="centerX" constant="-0.5" id="Mbt-AU-o52">
+                                <variation key="widthClass=compact" constant="0.5"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Zpa-7G-4NJ" secondAttribute="centerX" constant="-0.5" id="XjB-Zw-dgP">
+                                <variation key="widthClass=compact" constant="0.5"/>
+                            </constraint>
+                            <constraint firstItem="Lnj-IC-chR" firstAttribute="top" secondItem="DTh-EQ-59d" secondAttribute="bottom" constant="38" id="aGQ-11-bLl"/>
+                            <constraint firstItem="Lnj-IC-chR" firstAttribute="leading" secondItem="uPA-xz-urg" secondAttribute="leading" id="cEs-iR-Hfa"/>
+                            <constraint firstItem="9rD-5W-vXL" firstAttribute="top" secondItem="Zpa-7G-4NJ" secondAttribute="bottom" constant="34" id="dph-qp-khR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uPA-xz-urg" secondAttribute="bottom" constant="278" id="e7Z-4V-lJt"/>
+                            <constraint firstItem="9rD-5W-vXL" firstAttribute="leading" secondItem="Zpa-7G-4NJ" secondAttribute="leading" id="iOX-BE-7vb"/>
+                            <constraint firstItem="DTh-EQ-59d" firstAttribute="centerX" secondItem="Lnj-IC-chR" secondAttribute="centerX" id="mCP-Du-VHw"/>
+                            <constraint firstItem="uPA-xz-urg" firstAttribute="top" secondItem="Lnj-IC-chR" secondAttribute="bottom" constant="14" id="suf-Pw-eXQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9y9-TJ-W0E"/>
+                                <exclude reference="XjB-Zw-dgP"/>
+                                <exclude reference="2Fa-vW-8LC"/>
+                                <exclude reference="dph-qp-khR"/>
+                                <exclude reference="iOX-BE-7vb"/>
+                                <exclude reference="mCP-Du-VHw"/>
+                                <exclude reference="Bof-q6-J9w"/>
+                                <exclude reference="aGQ-11-bLl"/>
+                                <exclude reference="cEs-iR-Hfa"/>
+                                <exclude reference="5nu-tH-g6f"/>
+                                <exclude reference="Mbt-AU-o52"/>
+                                <exclude reference="suf-Pw-eXQ"/>
+                                <exclude reference="e7Z-4V-lJt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9y9-TJ-W0E"/>
+                                <include reference="XjB-Zw-dgP"/>
+                                <include reference="2Fa-vW-8LC"/>
+                                <include reference="dph-qp-khR"/>
+                                <include reference="iOX-BE-7vb"/>
+                                <include reference="mCP-Du-VHw"/>
+                                <include reference="Bof-q6-J9w"/>
+                                <include reference="aGQ-11-bLl"/>
+                                <include reference="cEs-iR-Hfa"/>
+                                <include reference="5nu-tH-g6f"/>
+                                <include reference="Mbt-AU-o52"/>
+                                <include reference="suf-Pw-eXQ"/>
+                                <include reference="e7Z-4V-lJt"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mensConvertedShoeSizeLable" destination="DTh-EQ-59d" id="kfv-uT-k3Z"/>
+                        <outlet property="mensShoeSizeTextField" destination="9rD-5W-vXL" id="mVD-3O-Oyz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
